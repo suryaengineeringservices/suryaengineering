@@ -1,101 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <title>SURYA Engineering Services | FEA CFD Experts</title>
 
-<meta name="description" content="Professional FEA, CFD & Thermal Simulation Services for Oil & Gas, Pressure Vessels, Heat Exchangers.">
+<meta name="description" content="Advanced FEA, CFD & Thermal Simulation Services for Oil & Gas, Pressure Vessels, Heat Exchangers.">
+<meta name="keywords" content="FEA, CFD, ANSYS, Simulation, Pressure Vessel Analysis India">
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 <style>
-body {font-family: 'Poppins', sans-serif;}
+
+/* GLOBAL */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+}
 
 /* HERO */
 .hero {
   background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
   color: white;
-  padding: 100px 20px;
+  padding: 120px 20px;
   text-align: center;
 }
 
-/* SERVICES */
+/* SERVICE BOX */
 .service-box {
   padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: 0.3s;
 }
-.service-box:hover {transform: translateY(-8px);}
+.service-box:hover {
+  transform: translateY(-10px);
+}
 
-<!-- PORTFOLIO -->
-<section class="container mt-5">
-<h2 class="text-center mb-4">Our Work</h2>
+/* PROJECT GALLERY */
+.project-card {
+  overflow: hidden;
+  border-radius: 10px;
+}
+.project-card img {
+  transition: 0.4s;
+  cursor: pointer;
+}
+.project-card:hover img {
+  transform: scale(1.1);
+}
 
-<div class="row">
-
-<!-- CFD Valve -->
-<div class="col-md-4" data-aos="zoom-in">
-<a href="assets/img/Projects/Valve/1.jpg" class="glightbox">
-<img src="assets/img/Projects/Valve/1.jpg" class="img-fluid rounded shadow">
-</a>
-<p class="text-center mt-2">CFD Valve Analysis</p>
-</div>
-
-<!-- Heat Exchanger -->
-<div class="col-md-4" data-aos="zoom-in">
-<a href="assets/img/Projects/Heat Exchanger/1.jpg" class="glightbox">
-<img src="assets/img/Projects/Heat Exchanger/1.jpg" class="img-fluid rounded shadow">
-</a>
-<p class="text-center mt-2">Heat Exchanger Thermal</p>
-</div>
-
-<!-- Ball Valve -->
-<div class="col-md-4" data-aos="zoom-in">
-<a href="assets/img/Projects/Ball Valve/1.jpg" class="glightbox">
-<img src="assets/img/Projects/Ball Valve/1.jpg" class="img-fluid rounded shadow">
-</a>
-<p class="text-center mt-2">Ball Valve CFD</p>
-</div>
-
-<!-- Vehicle CFD -->
-<div class="col-md-4 mt-4" data-aos="zoom-in">
-<a href="assets/img/Projects/Vehicle CFD/1.jpg" class="glightbox">
-<img src="assets/img/Projects/Vehicle CFD/1.jpg" class="img-fluid rounded shadow">
-</a>
-<p class="text-center mt-2">Vehicle Aerodynamics</p>
-</div>
-
-<!-- Turbine -->
-<div class="col-md-4 mt-4" data-aos="zoom-in">
-<a href="assets/img/Projects/Turbine CFD/1.jpg" class="glightbox">
-<img src="assets/img/Projects/Turbine CFD/1.jpg" class="img-fluid rounded shadow">
-</a>
-<p class="text-center mt-2">Turbine Flow Simulation</p>
-</div>
-
-<!-- Exhaust -->
-<div class="col-md-4 mt-4" data-aos="zoom-in">
-<a href="assets/img/Projects/Exhaust System/1.jpg" class="glightbox">
-<img src="assets/img/Projects/Exhaust System/1.jpg" class="img-fluid rounded shadow">
-</a>
-<p class="text-center mt-2">Exhaust Flow Analysis</p>
-</div>
-
-</div>
-</section>
-
-/* WATERMARK */
-.watermark {
+/* LIGHTBOX */
+#lightbox {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
-  opacity: 0.06;
-  font-size: 50px;
-  font-weight: bold;
+  display: none;
+  top:0; left:0;
+  width:100%; height:100%;
+  background: rgba(0,0,0,0.9);
+  justify-content:center;
+  align-items:center;
+  z-index:999;
+}
+#lightbox img {
+  max-width:90%;
+  max-height:90%;
 }
 
 /* WHATSAPP */
@@ -108,160 +86,124 @@ body {font-family: 'Poppins', sans-serif;}
   padding: 12px 18px;
   border-radius: 50px;
   text-decoration: none;
-}
-
-/* PRICING */
-.price-box {
-  border: 1px solid #ddd;
-  padding: 25px;
-  border-radius: 10px;
-  text-align: center;
+  font-weight: bold;
 }
 
 /* CTA */
 .cta {
-  background: #2c5364;
+  background: linear-gradient(135deg,#2c5364,#203a43);
   color: white;
-  padding: 60px;
+  padding: 70px;
   text-align: center;
 }
+
+/* FORM */
+form input, form textarea {
+  border-radius: 8px;
+}
+
+/* WATERMARK */
+.watermark {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.05;
+  font-size: 50px;
+  font-weight: bold;
+}
+
 </style>
+
 </head>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" rel="stylesheet">
+
 <body>
 
+<!-- WATERMARK -->
 <div class="watermark">SURYA</div>
 
-<a href="https://wa.me/8177820106" class="whatsapp">💬 Chat</a>
+<!-- WHATSAPP -->
+<a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">💬 Chat</a>
 
-<!-- NAV -->
-<nav class="navbar navbar-dark bg-dark">
+<!-- NAVBAR -->
+<nav class="navbar navbar-dark sticky-top">
 <div class="container">
-<a class="navbar-brand">SURYA Engineering Services</a>
+<a class="navbar-brand fw-bold">SURYA Engineering</a>
 </div>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
-<h1 data-aos="fade-up">FEA & CFD Simulation Experts</h1>
-<p data-aos="fade-up" data-aos-delay="100">
-Pressure Vessels | Heat Exchangers | Piping CFD | Thermal Analysis
-</p>
-<a href="#contact" class="btn btn-warning mt-3" data-aos="zoom-in">Get Free Quote</a>
+<h1 data-aos="fade-up">Advanced FEA & CFD Simulation</h1>
+<p data-aos="fade-up">Oil & Gas | Heat Exchangers | Pressure Vessels | Thermal Analysis</p>
+<a href="#contact" class="btn btn-warning mt-3">Get Free Quote</a>
 </section>
 
 <!-- ABOUT -->
-<section class="container mt-5" data-aos="fade-up">
-<h2 class="text-center">About Us</h2>
-<p class="text-center">
-We provide advanced engineering simulation services using ANSYS tools.
-Specialized in oil & gas, chemical and mechanical industries.
+<section class="container mt-5 text-center" data-aos="fade-up">
+<h2>About Us</h2>
+<p>
+We deliver high-precision engineering simulations using ANSYS tools for industrial applications.
 </p>
 </section>
 
 <!-- SERVICES -->
 <section class="container mt-5">
-<h2 class="text-center mb-4" data-aos="fade-up">Our Services</h2>
+<h2 class="text-center mb-4">Our Services</h2>
 
 <div class="row">
 
 <div class="col-md-3" data-aos="zoom-in">
 <div class="service-box">
 <h5>FEA Analysis</h5>
-<p>Static, fatigue, pressure vessel analysis</p>
+<p>Stress, fatigue & structural validation</p>
 </div>
 </div>
 
-<div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+<div class="col-md-3" data-aos="zoom-in">
 <div class="service-box">
 <h5>CFD Simulation</h5>
 <p>Flow, turbulence & pressure drop</p>
 </div>
 </div>
 
-<div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+<div class="col-md-3" data-aos="zoom-in">
 <div class="service-box">
 <h5>Thermal Analysis</h5>
-<p>Heat exchanger & reactor simulation</p>
+<p>Heat transfer & temperature mapping</p>
 </div>
 </div>
 
-<div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+<div class="col-md-3" data-aos="zoom-in">
 <div class="service-box">
 <h5>Piping CFD</h5>
-<p>Flow optimization & velocity study</p>
+<p>Flow optimization & system efficiency</p>
 </div>
 </div>
 
 </div>
 </section>
 
-<!-- PORTFOLIO -->
-<section class="container mt-5 portfolio">
-<h2 class="text-center mb-4" data-aos="fade-up">Our Work</h2>
-
-<div class="row">
-
-<div class="col-md-4" data-aos="zoom-in">
-<img src="assets/img/Projects/cfd-valve.jpg" class="img-fluid">
-<p class="text-center">CFD Valve Analysis</p>
-</div>
-
-<div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-<img src="assets/img/Projects/heat-exchanger.jpg" class="img-fluid">
-<p class="text-center">Heat Exchanger CFD</p>
-</div>
-
-<div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-<img src="assets/img/Projects/ball-valve.jpg" class="img-fluid">
-<p class="text-center">Ball Valve Simulation</p>
-</div>
-
-<div class="col-md-4 mt-4" data-aos="zoom-in">
-<img src="assets/img/Projects/vehicle-cfd.jpg" class="img-fluid">
-<p class="text-center">Vehicle Aerodynamics</p>
-</div>
-
-<div class="col-md-4 mt-4" data-aos="zoom-in" data-aos-delay="100">
-<img src="assets/img/Projects/turbine.jpg" class="img-fluid">
-<p class="text-center">Turbine CFD</p>
-</div>
-
-<div class="col-md-4 mt-4" data-aos="zoom-in" data-aos-delay="200">
-<img src="assets/img/Projects/exhaust.jpg" class="img-fluid">
-<p class="text-center">Exhaust System Analysis</p>
-</div>
-
-</div>
-</section>
-
-<!-- PRICING -->
+<!-- PROJECTS -->
 <section class="container mt-5">
-<h2 class="text-center mb-4" data-aos="fade-up">Pricing</h2>
+<h2 class="text-center mb-4">Our Projects</h2>
 
-<div class="row">
+<div class="row g-3">
 
 <div class="col-md-4" data-aos="zoom-in">
-<div class="price-box">
-<h4>Basic</h4>
-<p>₹5,000+</p>
-<p>Small analysis</p>
+<div class="project-card">
+<img src="assets/img/Projects/Valve.jpg" class="img-fluid" onclick="openLightbox(this.src)">
 </div>
 </div>
 
-<div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
-<div class="price-box">
-<h4>Standard</h4>
-<p>₹15,000+</p>
-<p>Medium projects</p>
+<div class="col-md-4" data-aos="zoom-in">
+<div class="project-card">
+<img src="assets/img/Projects/Heat Exchanger.jpg" class="img-fluid" onclick="openLightbox(this.src)">
 </div>
 </div>
 
-<div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
-<div class="price-box">
-<h4>Advanced</h4>
-<p>₹50,000+</p>
-<p>Full simulation + report</p>
+<div class="col-md-4" data-aos="zoom-in">
+<div class="project-card">
+<img src="assets/img/Projects/Turbine CFD.jpg" class="img-fluid" onclick="openLightbox(this.src)">
 </div>
 </div>
 
@@ -269,23 +211,23 @@ Specialized in oil & gas, chemical and mechanical industries.
 </section>
 
 <!-- CTA -->
-<section class="cta mt-5" data-aos="fade-up">
-<h2>Need Simulation Support?</h2>
-<p>Get professional engineering solutions with accurate results</p>
+<section class="cta mt-5">
+<h2>Need Engineering Simulation?</h2>
+<p>We deliver accurate and reliable results for critical industries</p>
 <a href="#contact" class="btn btn-warning">Contact Now</a>
 </section>
 
 <!-- CONTACT -->
 <section class="container mt-5" id="contact">
-<h2 class="text-center mb-4" data-aos="fade-up">Get Quotation</h2>
+<h2 class="text-center mb-4">Get Quotation</h2>
 
-<form action="https://formspree.io/f/your-id" method="POST" data-aos="zoom-in">
+<form action="https://formspree.io/f/your-id" method="POST">
 
-<input class="form-control mb-2" type="text" placeholder="Name" required>
-<input class="form-control mb-2" type="email" placeholder="Email" required>
-<textarea class="form-control mb-2" placeholder="Project Details"></textarea>
+<input class="form-control mb-3" type="text" name="name" placeholder="Your Name" required>
+<input class="form-control mb-3" type="email" name="email" placeholder="Email" required>
+<textarea class="form-control mb-3" name="message" placeholder="Project Details"></textarea>
 
-<button class="btn btn-primary">Submit</button>
+<button class="btn btn-primary w-100">Submit</button>
 
 </form>
 </section>
@@ -296,14 +238,26 @@ Specialized in oil & gas, chemical and mechanical industries.
 <p>FEA | CFD | Design | Simulation</p>
 </footer>
 
+<!-- LIGHTBOX -->
+<div id="lightbox" onclick="closeLightbox()">
+<img id="lightbox-img">
+</div>
+
+<!-- SCRIPTS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
-AOS.init({
-  duration: 1000,
-  once: true
-});
+AOS.init();
+
+function openLightbox(src){
+  document.getElementById("lightbox").style.display="flex";
+  document.getElementById("lightbox-img").src=src;
+}
+
+function closeLightbox(){
+  document.getElementById("lightbox").style.display="none";
+}
 </script>
 
 </body>
