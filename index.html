@@ -36,10 +36,18 @@ body {
 
 /* NAVBAR */
 .custom-navbar {
-  background: rgba(10, 15, 25, 0.85);
-  backdrop-filter: blur(10px);
-  padding: 15px 0;
-  transition: 0.3s;
+  background: rgba(5, 10, 20, 0.75);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  padding: 12px 0;
+  transition: 0.4s;
+}
+  .navbar-brand img {
+  transition: 0.4s;
+}
+
+.navbar-brand img:hover {
+  transform: scale(1.05);
 }
 
 .navbar-brand {
@@ -68,18 +76,23 @@ body {
   color: white;
   padding-top: 100px;
 }
-
 .hero h1 {
   font-size: 3.8rem;
   font-weight: 700;
   line-height: 1.2;
 }
-
+.hero logo{
+  <div class="mt-5">
+  <img src="assets/img/logo.png"
+       alt="SURYA Engineering"
+       style="height:120px;">
+</div>
+  }
 .hero p {
   font-size: 1.15rem;
   color: #d1d5db;
 }
-
+<link rel="icon" type="image/png" href="assets/img/logo.png">
 .hero-image {
   animation: float 4s ease-in-out infinite;
   border-radius: 20px;
@@ -776,7 +789,9 @@ body {
 
       <div class="col-lg-4 mb-4">
 
-        <h4 class="fw-bold mb-3">SURYA Engineering</h4>
+        <img src="assets/img/logo.png"
+     alt="SURYA Engineering"
+     style="height:90px; margin-bottom:20px;">
 
         <p>
           Advanced engineering simulation and CAE consulting services for industrial applications.
