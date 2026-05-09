@@ -36,11 +36,50 @@ body {
 
 /* NAVBAR */
 .custom-navbar {
-  background: rgba(5, 10, 20, 0.75);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  padding: 12px 0;
-  transition: 0.4s;
+  <a class="navbar-brand d-flex align-items-center" href="index.html">
+
+  <img src="assets/img/logo.png"
+       alt="SURYA Engineering Logo"
+       style="height:65px; width:auto; margin-right:12px;">
+
+  <div class="d-flex flex-column">
+
+    <span style="
+      color:white;
+      font-size:28px;
+      font-weight:700;
+      line-height:1;
+      letter-spacing:1px;
+    ">
+      SURYA
+    </span>
+
+    <span style="
+      color:#f59e0b;
+      font-size:13px;
+      font-weight:500;
+      letter-spacing:2px;
+      margin-top:4px;
+    ">
+      ENGINEERING SERVICES
+    </span>
+
+  </div>
+
+</a>
+}
+  .navbar-brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.navbar-brand img {
+  transition: 0.3s;
+}
+
+.navbar-brand:hover img {
+  transform: scale(1.05);
 }
   .navbar-brand img {
   transition: 0.4s;
@@ -324,7 +363,7 @@ body {
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center" href="#">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
 
   <img src="assets/img/logo.png"
        alt="SURYA Engineering Logo"
@@ -817,9 +856,9 @@ body {
         <h5 class="mb-3">Follow Us</h5>
 
         <div class="d-flex gap-3 fs-4">
-          <a href="#"><i class="fab fa-linkedin"></i></a>
-          <a href="#"><i class="fab fa-facebook"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="index.html"><i class="fab fa-linkedin"></i></a>
+          <a href="index.html"><i class="fab fa-facebook"></i></a>
+          <a href="index.html"><i class="fab fa-instagram"></i></a>
         </div>
 
       </div>
