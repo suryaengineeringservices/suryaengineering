@@ -1,416 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
 <title>SURYA Engineering Services | FEA & CFD Experts</title>
 
 <meta name="description" content="Advanced FEA, CFD & Thermal Simulation Services for Pressure Vessels, Heat Exchangers, Oil & Gas Industries.">
-<meta name="keywords" content="FEA, CFD, ANSYS, Thermal Analysis, Pressure Vessel Analysis, Engineering Simulation">
 
+<!-- Bootstrap -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Font Awesome -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+
+<!-- AOS -->
 <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Google Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- Favicon -->
+<link rel="icon" type="image/png" href="assets/img/logo.png">
+
 <style>
-/* COMPANY BRANDING */
-.company-text{
-  display:flex;
-  flex-direction:column;
-  justify-content:center;
-}
 
-.company-name{
-  color:#ffffff;
-  font-size:30px;
-  font-weight:700;
+*{
   margin:0;
-  line-height:1;
-  letter-spacing:2px;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.company-subtitle{
-  color:#f59e0b;
-  font-size:12px;
-  font-weight:500;
-  letter-spacing:3px;
-  margin-top:6px;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-
-  .company-name{
-    font-size:22px;
-  }
-
-  .company-subtitle{
-    font-size:10px;
-    letter-spacing:2px;
-  }
-
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #f8fafc;
-  color: #1e293b;
+body{
+  font-family:'Poppins',sans-serif;
+  background:#f8fafc;
+  color:#1e293b;
 }
 
 /* NAVBAR */
-.custom-navbar {
-  <a class="navbar-brand d-flex align-items-center" href="index.html">
-
-  <!-- LOGO -->
-  <img src="assets/img/logo.png"
-       alt="SURYA Engineering Logo"
-       style="height:75px; width:auto; margin-right:15px;">
-
-  <!-- COMPANY NAME -->
-  <div class="company-text">
-
-    <h2 class="company-name">
-      SURYA
-    </h2>
-
-    <span class="company-subtitle">
-      ENGINEERING SERVICES
-    </span>
-
-  </div>
-
-</a>
-  <div class="d-flex flex-column">
-
-    <span style="
-      color:white;
-      font-size:28px;
-      font-weight:700;
-      line-height:1;
-      letter-spacing:1px;
-    ">
-      SURYA
-    </span>
-
-    <span style="
-      color:#f59e0b;
-      font-size:13px;
-      font-weight:500;
-      letter-spacing:2px;
-      margin-top:4px;
-    ">
-      ENGINEERING SERVICES
-    </span>
-
-  </div>
-
-</a>
-}
-  .navbar-brand {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
+.custom-navbar{
+  background:rgba(15,23,42,0.95);
+  backdrop-filter:blur(8px);
 }
 
-.navbar-brand img {
-  transition: 0.3s;
+.navbar-brand img{
+  transition:0.3s;
 }
 
-.navbar-brand:hover img {
-  transform: scale(1.05);
-}
-  .navbar-brand img {
-  transition: 0.4s;
+.navbar-brand img:hover{
+  transform:scale(1.05);
 }
 
-.navbar-brand img:hover {
-  transform: scale(1.05);
+.nav-link{
+  color:#fff !important;
+  margin-left:15px;
+  font-weight:500;
 }
 
-.navbar-brand {
-  font-size: 1.5rem;
-  color: #fff !important;
-}
-
-.nav-link {
-  color: #fff !important;
-  margin-left: 15px;
-  font-weight: 500;
-}
-
-.nav-link:hover {
-  color: #f59e0b !important;
+.nav-link:hover{
+  color:#f59e0b !important;
 }
 
 /* HERO */
-.hero {
-  min-height: 100vh;
+.hero{
+  min-height:100vh;
   background:
-    linear-gradient(rgba(5,10,20,0.82), rgba(5,10,20,0.82)),
-    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop') center/cover;
-  display: flex;
-  align-items: center;
-  color: white;
-  padding-top: 100px;
-}
-.hero h1 {
-  font-size: 3.8rem;
-  font-weight: 700;
-  line-height: 1.2;
-}
-.hero logo{
-  <div class="mt-5">
-  <img src="assets/img/logo.png"
-       alt="SURYA Engineering"
-       style="height:120px;">
-</div>
-  }
-.hero p {
-  font-size: 1.15rem;
-  color: #d1d5db;
-}
-<link rel="icon" type="image/png" href="assets/img/logo.png">
-.hero-image {
-  animation: float 4s ease-in-out infinite;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  linear-gradient(rgba(5,10,20,0.82), rgba(5,10,20,0.82)),
+  url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070&auto=format&fit=crop') center/cover;
+  display:flex;
+  align-items:center;
+  color:white;
+  padding-top:100px;
 }
 
-@keyframes float {
-  0% {transform: translateY(0px);}
-  50% {transform: translateY(-15px);}
-  100% {transform: translateY(0px);}
+.hero h1{
+  font-size:3.8rem;
+  font-weight:700;
+  line-height:1.2;
 }
 
-.btn-warning {
-  background: #f59e0b;
-  border: none;
+.hero p{
+  font-size:1.1rem;
+  color:#d1d5db;
 }
 
-.btn-warning:hover {
-  background: #d97706;
+.hero-image{
+  border-radius:20px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.35);
+  animation:float 4s ease-in-out infinite;
 }
 
-.section-title {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #0f172a;
+@keyframes float{
+  0%{transform:translateY(0);}
+  50%{transform:translateY(-15px);}
+  100%{transform:translateY(0);}
 }
 
-.section-subtitle {
-  color: #64748b;
-  max-width: 700px;
-  margin: auto;
+.btn-warning{
+  background:#f59e0b;
+  border:none;
+}
+
+.btn-warning:hover{
+  background:#d97706;
+}
+
+/* SECTION */
+.section-title{
+  font-size:2.8rem;
+  font-weight:700;
+  color:#0f172a;
+}
+
+.section-subtitle{
+  color:#64748b;
+  max-width:700px;
+  margin:auto;
 }
 
 /* ABOUT */
-.about-box {
-  background: white;
-  border-radius: 20px;
-  padding: 40px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+.about-box{
+  background:white;
+  border-radius:20px;
+  padding:40px;
+  box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
 
 /* STATS */
-.stats-section {
-  background: linear-gradient(135deg,#0f172a,#1e293b);
-  color: white;
+.stats-section{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
 }
 
-.stat-box h2 {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #f59e0b;
+.stat-box h2{
+  color:#f59e0b;
+  font-size:3rem;
+  font-weight:700;
 }
 
 /* SERVICES */
-.service-box {
-  background: white;
-  border-radius: 20px;
-  padding: 35px 25px;
-  transition: 0.4s;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  height: 100%;
+.service-box{
+  background:white;
+  border-radius:22px;
+  padding:40px 25px;
+  text-align:center;
+  height:100%;
+  transition:0.4s;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
 }
+
+.service-box:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 45px rgba(0,0,0,0.15);
+}
+
 .service-icon{
+  margin-bottom:25px;
   display:flex;
   justify-content:center;
   align-items:center;
-  margin-bottom:25px;
 }
 
 .service-img{
   width:110px;
   height:110px;
   object-fit:cover;
-  border-radius:16px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.15);
+  border-radius:20px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.15);
 }
-.service-box:hover {
-  transform: translateY(-12px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+
+.service-box h5{
+  font-size:1.6rem;
+  font-weight:700;
+  margin-bottom:15px;
 }
-.service-icon {
-  font-size: 55px;
-  color: #f59e0b;
-  margin-bottom: 20px;
+
+.service-box p{
+  color:#475569;
+  line-height:1.7;
 }
 
 /* INDUSTRIES */
-.industry-card {
-  background: linear-gradient(135deg,#203a43,#2c5364);
-  color: white;
-  padding: 35px;
-  border-radius: 18px;
-  transition: 0.3s;
-  font-weight: 600;
+.industry-card{
+  background:linear-gradient(135deg,#203a43,#2c5364);
+  color:white;
+  padding:35px;
+  border-radius:18px;
+  transition:0.3s;
+  font-weight:600;
 }
 
-.industry-card:hover {
-  transform: scale(1.05);
+.industry-card:hover{
+  transform:scale(1.05);
 }
 
 /* PROJECTS */
-.project-card {
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px;
+.project-card{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
 }
 
-.project-card img {
-  transition: 0.5s;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+.project-card img{
+  width:100%;
+  height:300px;
+  object-fit:cover;
+  transition:0.5s;
 }
 
-.project-card:hover img {
-  transform: scale(1.1);
+.project-card:hover img{
+  transform:scale(1.1);
 }
 
-.project-overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,0.75);
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: 0.4s;
-  text-align: center;
-  padding: 20px;
+.project-overlay{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.75);
+  color:white;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  opacity:0;
+  transition:0.4s;
+  text-align:center;
 }
 
-.project-card:hover .project-overlay {
-  opacity: 1;
+.project-card:hover .project-overlay{
+  opacity:1;
 }
 
-/* CLIENTS */
-.client-logo {
-  background: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  font-weight: 600;
+/* CLIENT */
+.client-logo{
+  background:white;
+  padding:30px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  font-weight:600;
 }
 
 /* CTA */
-.cta-section {
-  background: linear-gradient(135deg,#0f172a,#1e293b);
-  color: white;
-  padding: 90px 20px;
+.cta-section{
+  background:linear-gradient(135deg,#0f172a,#1e293b);
+  color:white;
+  padding:90px 20px;
 }
 
 /* CONTACT */
-.contact-box {
-  background: white;
-  padding: 40px;
-  border-radius: 20px;
-  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+.contact-box{
+  background:white;
+  padding:40px;
+  border-radius:20px;
+  box-shadow:0 10px 35px rgba(0,0,0,0.08);
 }
 
-.form-control {
-  border-radius: 10px;
-  padding: 12px;
+.form-control{
+  border-radius:12px;
+  padding:12px;
 }
 
 /* FOOTER */
-.footer {
-  background: #0f172a;
-  color: white;
+.footer{
+  background:#0f172a;
+  color:white;
 }
 
-.footer a {
-  color: #cbd5e1;
-  text-decoration: none;
+.footer a{
+  color:#cbd5e1;
+  text-decoration:none;
 }
 
-.footer a:hover {
-  color: #f59e0b;
+.footer a:hover{
+  color:#f59e0b;
 }
 
 /* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  background: #25D366;
-  color: white;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 28px;
-  z-index: 999;
-  text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  left:20px;
+  width:60px;
+  height:60px;
+  background:#25D366;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  z-index:999;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(0,0,0,0.25);
 }
 
-/* WATERMARK */
-.watermark {
-  position: fixed;
-  bottom: 10px;
-  right: 15px;
-  opacity: 0.03;
-  font-size: 70px;
-  font-weight: 700;
-  z-index: -1;
-}
+/* MOBILE */
+@media(max-width:768px){
 
-@media(max-width: 768px) {
-
-  .hero h1 {
-    font-size: 2.5rem;
+  .hero{
+    text-align:center;
   }
 
-  .hero {
-    text-align: center;
+  .hero h1{
+    font-size:2.4rem;
   }
 
-  .hero-image {
-    margin-top: 40px;
+  .hero-image{
+    margin-top:40px;
   }
 
 }
 
 </style>
 </head>
-<body>
 
-<div class="watermark">SURYA</div>
+<body>
 
 <!-- WHATSAPP -->
 <a href="https://wa.me/91XXXXXXXXXX" class="whatsapp">
@@ -419,20 +322,28 @@ body {
 
 <!-- NAVBAR -->
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+
   <div class="container">
 
-    <a class="navbar-brand d-flex align-items-center" href="index.html">
+    <a class="navbar-brand d-flex align-items-center" href="#">
 
-  <img src="assets/img/logo.png"
-       alt="SURYA Engineering Logo"
-       style="height:65px; width:auto; margin-right:12px;">
-</a>
+      <img src="assets/img/logo.png"
+           alt="SURYA Logo"
+           style="height:70px; width:auto;">
 
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+    </a>
+
+    <button class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navMenu">
+
       <span class="navbar-toggler-icon"></span>
+
     </button>
 
     <div class="collapse navbar-collapse" id="navMenu">
+
       <ul class="navbar-nav ms-auto align-items-lg-center">
 
         <li class="nav-item">
@@ -462,13 +373,16 @@ body {
         </li>
 
       </ul>
+
     </div>
 
   </div>
+
 </nav>
 
 <!-- HERO -->
 <section class="hero">
+
   <div class="container">
 
     <div class="row align-items-center">
@@ -481,7 +395,7 @@ body {
 
         <p class="mt-4 mb-4">
           High-precision engineering simulations for Pressure Vessels,
-          Heat Exchangers, Piping Systems, Turbomachinery and Industrial Equipment.
+          Heat Exchangers, Piping Systems and Industrial Equipment.
         </p>
 
         <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-lg-start">
@@ -508,465 +422,107 @@ body {
     </div>
 
   </div>
-</section>
 
-<!-- ABOUT -->
-<section class="py-5" id="about">
-  <div class="container">
-
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title">About SURYA Engineering</h2>
-      <p class="section-subtitle">
-        We provide advanced CAE engineering solutions using ANSYS tools for industries requiring accurate structural, thermal and fluid flow simulations.
-      </p>
-    </div>
-
-    <div class="about-box" data-aos="fade-up">
-      <div class="row align-items-center">
-
-        <div class="col-lg-6">
-          <img src="https://images.unsplash.com/photo-1537462715879-360eeb61a0ad?q=80&w=1974&auto=format&fit=crop"
-               class="img-fluid rounded-4">
-        </div>
-
-        <div class="col-lg-6 mt-4 mt-lg-0">
-
-          <h3 class="fw-bold mb-4">Engineering Simulation Experts</h3>
-
-          <p>
-            SURYA Engineering Services specializes in Finite Element Analysis (FEA), Computational Fluid Dynamics (CFD), Thermal Analysis and Design Validation.
-          </p>
-
-          <p>
-            Our expertise includes pressure vessels, piping systems, valves, heat exchangers and rotating equipment for Oil & Gas, Process Industries and Power Plants.
-          </p>
-
-          <ul class="list-unstyled mt-4">
-            <li class="mb-2"><i class="fa fa-check text-warning me-2"></i> ASME & API Based Simulations</li>
-            <li class="mb-2"><i class="fa fa-check text-warning me-2"></i> ANSYS Mechanical & Fluent</li>
-            <li class="mb-2"><i class="fa fa-check text-warning me-2"></i> Fast Project Delivery</li>
-            <li class="mb-2"><i class="fa fa-check text-warning me-2"></i> Accurate Engineering Reports</li>
-          </ul>
-
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="stats-section py-5">
-  <div class="container">
-
-    <div class="row text-center">
-
-      <div class="col-md-3 col-6 mb-4 mb-md-0">
-        <div class="stat-box">
-          <h2>250+</h2>
-          <p>Projects Completed</p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-6 mb-4 mb-md-0">
-        <div class="stat-box">
-          <h2>7+</h2>
-          <p>Years Experience</p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-6">
-        <div class="stat-box">
-          <h2>100%</h2>
-          <p>Client Satisfaction</p>
-        </div>
-      </div>
-
-      <div class="col-md-3 col-6">
-        <div class="stat-box">
-          <h2>24/7</h2>
-          <p>Technical Support</p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
 </section>
 
 <!-- SERVICES -->
 <section class="py-5" id="services">
+
   <div class="container">
 
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title">Our Services</h2>
+    <div class="text-center mb-5">
+
+      <h2 class="section-title">
+        Our Services
+      </h2>
+
       <p class="section-subtitle">
-        Advanced engineering simulation and CAE consulting services for critical industrial applications.
+        Advanced engineering simulation and CAE consulting services.
       </p>
+
     </div>
 
     <div class="row g-4">
 
-      <!-- FEA SERVICE -->
-<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+      <!-- FEA -->
+      <div class="col-lg-3 col-md-6">
 
-  <div class="service-box text-center"
-     onclick="toggleFEAProjects()"
-     style="cursor:pointer;">
+        <div class="service-box">
 
-  <div class="service-icon">
-    <img src="assets/img/fea-analysis.png"
-         alt="FEA Analysis"
-         class="service-img">
-  </div>
-
-  <h5 class="fw-bold">FEA Analysis</h5>
-
-  <p class="mt-3">
-    Structural, fatigue, vibration and nonlinear stress analysis.
-  </p>
-
-</div>
-
-<!-- FEA PROJECTS -->
-<div id="fea-projects" style="display:none;" class="mt-5">
-
-  <div class="row g-4">
-
-    <!-- Project 1 -->
-    <div class="col-lg-4">
-
-      <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
-        <img src="images/pressure-vessel.jpg"
-             class="card-img-top"
-             alt="Pressure Vessel Analysis"
-             style="height:250px; object-fit:cover;">
-
-        <div class="card-body">
-
-          <h5 class="fw-bold">
-            Pressure Vessel Integrity
-          </h5>
-
-          <p class="text-muted">
-            Structural FEA to validate stress distribution
-            and fatigue life of high-pressure vessels
-            under ASME standards.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Project 2 -->
-    <div class="col-lg-4">
-
-      <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
-        <img src="images/automotive-chassis.jpg"
-             class="card-img-top"
-             alt="Automotive Chassis Analysis"
-             style="height:250px; object-fit:cover;">
-
-        <div class="card-body">
-
-          <h5 class="fw-bold">
-            Automotive Chassis Static FE
-          </h5>
-
-          <p class="text-muted">
-            Finite element analysis of chassis components
-            to ensure durability, stiffness and crashworthiness.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-    <!-- Project 3 -->
-    <div class="col-lg-4">
-
-      <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
-
-        <img src="images/heat-exchanger.jpg"
-             class="card-img-top"
-             alt="Heat Exchanger Thermal Analysis"
-             style="height:250px; object-fit:cover;">
-
-        <div class="card-body">
-
-          <h5 class="fw-bold">
-            Heat Exchanger Thermal FEA
-          </h5>
-
-          <p class="text-muted">
-            Thermal stress and fatigue analysis of heat exchangers
-            to optimize performance and extend service life.
-          </p>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-
-</div>
-      <div class="col-lg-3 col-md-6" data-aos="zoom-in">
-        <div class="service-box text-center">
           <div class="service-icon">
-            <i class="fa-solid fa-wind"></i>
+            <img src="assets/img/fea-analysis.png"
+                 alt="FEA Analysis"
+                 class="service-img">
           </div>
-          <h5 class="fw-bold">CFD Simulation</h5>
-          <p class="mt-3">
+
+          <h5>FEA Analysis</h5>
+
+          <p>
+            Structural, fatigue, vibration and nonlinear stress analysis.
+          </p>
+
+        </div>
+
+      </div>
+
+      <!-- CFD -->
+      <div class="col-lg-3 col-md-6">
+
+        <div class="service-box">
+
+          <div class="service-icon">
+            <img src="assets/img/cfd-analysis.png"
+                 alt="CFD Simulation"
+                 class="service-img">
+          </div>
+
+          <h5>CFD Simulation</h5>
+
+          <p>
             Flow behavior, turbulence, pressure drop and optimization.
           </p>
+
         </div>
+
       </div>
 
-      <div class="col-lg-3 col-md-6" data-aos="zoom-in">
-        <div class="service-box text-center">
+      <!-- THERMAL -->
+      <div class="col-lg-3 col-md-6">
+
+        <div class="service-box">
+
           <div class="service-icon">
-            <i class="fa-solid fa-temperature-high"></i>
+            <img src="assets/img/thermal-analysis.png"
+                 alt="Thermal Analysis"
+                 class="service-img">
           </div>
-          <h5 class="fw-bold">Thermal Analysis</h5>
-          <p class="mt-3">
+
+          <h5>Thermal Analysis</h5>
+
+          <p>
             Heat transfer and temperature distribution simulations.
           </p>
+
         </div>
+
       </div>
 
-      <div class="col-lg-3 col-md-6" data-aos="zoom-in">
-        <div class="service-box text-center">
+      <!-- PIPING -->
+      <div class="col-lg-3 col-md-6">
+
+        <div class="service-box">
+
           <div class="service-icon">
-            <i class="fa-solid fa-gears"></i>
+            <img src="assets/img/piping-analysis.png"
+                 alt="Piping CFD"
+                 class="service-img">
           </div>
-          <h5 class="fw-bold">Piping CFD</h5>
-          <p class="mt-3">
+
+          <h5>Piping CFD</h5>
+
+          <p>
             Flow optimization and piping system performance evaluation.
           </p>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- INDUSTRIES -->
-<section class="py-5 bg-light" id="industries">
-  <div class="container">
-
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title">Industries We Serve</h2>
-      <p class="section-subtitle">
-        Delivering reliable engineering solutions for diverse industrial sectors.
-      </p>
-    </div>
-
-    <div class="row g-4 text-center">
-
-      <div class="col-md-3" data-aos="flip-left">
-        <div class="industry-card">
-          <i class="fa-solid fa-oil-well fa-2x mb-3"></i>
-          <h5>Oil & Gas</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3" data-aos="flip-left">
-        <div class="industry-card">
-          <i class="fa-solid fa-industry fa-2x mb-3"></i>
-          <h5>Process Plants</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3" data-aos="flip-left">
-        <div class="industry-card">
-          <i class="fa-solid fa-bolt fa-2x mb-3"></i>
-          <h5>Power Plants</h5>
-        </div>
-      </div>
-
-      <div class="col-md-3" data-aos="flip-left">
-        <div class="industry-card">
-          <i class="fa-solid fa-flask fa-2x mb-3"></i>
-          <h5>Chemical Industry</h5>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- PROJECTS -->
-<section class="py-5" id="projects">
-  <div class="container">
-
-    <div class="text-center mb-5" data-aos="fade-up">
-      <h2 class="section-title">Our Projects</h2>
-      <p class="section-subtitle">
-        Engineering simulations and industrial validation projects.
-      </p>
-    </div>
-
-    <div class="row g-4">
-
-      <div class="col-lg-4" data-aos="zoom-in">
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?q=80&w=1974&auto=format&fit=crop">
-
-          <div class="project-overlay">
-            <h4>Valve CFD Analysis</h4>
-            <p>Pressure Drop Optimization</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4" data-aos="zoom-in">
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2070&auto=format&fit=crop">
-
-          <div class="project-overlay">
-            <h4>Heat Exchanger Analysis</h4>
-            <p>Thermal Performance Evaluation</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4" data-aos="zoom-in">
-        <div class="project-card">
-          <img src="https://images.unsplash.com/photo-1565008447742-97f6f38c985c?q=80&w=1974&auto=format&fit=crop">
-
-          <div class="project-overlay">
-            <h4>Turbine CFD</h4>
-            <p>Flow Optimization Simulation</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CLIENTS -->
-<section class="py-5 bg-light">
-  <div class="container">
-
-    <div class="text-center mb-5">
-      <h2 class="section-title">Trusted By Industries</h2>
-    </div>
-
-    <div class="row g-4 text-center">
-
-      <div class="col-md-3 col-6">
-        <div class="client-logo">Oil & Gas Clients</div>
-      </div>
-
-      <div class="col-md-3 col-6">
-        <div class="client-logo">Process Industries</div>
-      </div>
-
-      <div class="col-md-3 col-6">
-        <div class="client-logo">Power Plants</div>
-      </div>
-
-      <div class="col-md-3 col-6">
-        <div class="client-logo">Manufacturing Units</div>
-      </div>
-
-    </div>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="cta-section text-center">
-  <div class="container" data-aos="zoom-in">
-
-    <h2 class="display-5 fw-bold mb-4">
-      Need Engineering Simulation Support?
-    </h2>
-
-    <p class="lead mb-4">
-      We deliver reliable and accurate engineering solutions for critical industrial systems.
-    </p>
-
-    <a href="#contact" class="btn btn-warning btn-lg px-5">
-      Contact Us Today
-    </a>
-
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="py-5" id="contact">
-  <div class="container">
-
-    <div class="text-center mb-5">
-      <h2 class="section-title">Get Quotation</h2>
-      <p class="section-subtitle">
-        Send your project requirements and our team will contact you shortly.
-      </p>
-    </div>
-
-    <div class="row align-items-center">
-
-      <div class="col-lg-5 mb-4">
-
-        <h3 class="fw-bold mb-4">
-          Let's Discuss Your Project
-        </h3>
-
-        <p class="mb-4">
-          Contact us for FEA, CFD, Thermal and Engineering Design Validation services.
-        </p>
-
-        <p><i class="fa fa-envelope text-warning me-2"></i> info@suryaengineering.com</p>
-        <p><i class="fa fa-phone text-warning me-2"></i> +91 XXXXX XXXXX</p>
-        <p><i class="fa fa-location-dot text-warning me-2"></i> Pune, Maharashtra, India</p>
-
-      </div>
-
-      <div class="col-lg-7">
-
-        <div class="contact-box">
-
-          <form action="https://formspree.io/f/your-id" method="POST">
-
-            <div class="row">
-
-              <div class="col-md-6 mb-3">
-                <input type="text" class="form-control" name="name" placeholder="Your Name" required>
-              </div>
-
-              <div class="col-md-6 mb-3">
-                <input type="email" class="form-control" name="email" placeholder="Email Address" required>
-              </div>
-
-            </div>
-
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Company Name">
-            </div>
-
-            <div class="mb-3">
-              <textarea class="form-control" rows="6" name="message" placeholder="Project Details"></textarea>
-            </div>
-
-            <button class="btn btn-warning w-100 py-3 fw-bold">
-              Submit Inquiry
-            </button>
-
-          </form>
 
         </div>
 
@@ -975,94 +531,43 @@ body {
     </div>
 
   </div>
+
 </section>
 
 <!-- FOOTER -->
 <footer class="footer py-5">
-  <div class="container">
 
-    <div class="row">
+  <div class="container text-center">
 
-      <div class="col-lg-4 mb-4">
+    <img src="assets/img/logo.png"
+         alt="SURYA Engineering"
+         style="height:90px; margin-bottom:20px;">
 
-        <img src="assets/img/logo.png"
-     alt="SURYA Engineering"
-     style="height:90px; margin-bottom:20px;">
-
-        <p>
-          Advanced engineering simulation and CAE consulting services for industrial applications.
-        </p>
-
-      </div>
-
-      <div class="col-lg-4 mb-4">
-
-        <h5 class="mb-3">Quick Links</h5>
-
-        <ul class="list-unstyled">
-          <li class="mb-2"><a href="#about">About</a></li>
-          <li class="mb-2"><a href="#services">Services</a></li>
-          <li class="mb-2"><a href="#projects">Projects</a></li>
-          <li class="mb-2"><a href="#contact">Contact</a></li>
-        </ul>
-
-      </div>
-
-      <div class="col-lg-4">
-
-        <h5 class="mb-3">Follow Us</h5>
-
-        <div class="d-flex gap-3 fs-4">
-          <a href="index.html"><i class="fab fa-linkedin"></i></a>
-          <a href="index.html"><i class="fab fa-facebook"></i></a>
-          <a href="index.html"><i class="fab fa-instagram"></i></a>
-        </div>
-
-      </div>
-
-    </div>
+    <p>
+      Advanced engineering simulation and CAE consulting services.
+    </p>
 
     <hr class="my-4">
 
-    <div class="text-center">
+    <p>
       © 2026 SURYA Engineering Services | All Rights Reserved
-    </div>
+    </p>
 
   </div>
+
 </footer>
 
-<!-- SCRIPTS -->
+<!-- JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 <script>
 AOS.init({
-  duration: 1000,
-  once: true
+  duration:1000,
+  once:true
 });
 </script>
-<script>
 
-function toggleFEAProjects() {
-
-  const projects = document.getElementById("fea-projects");
-
-  if(projects.style.display === "none" || projects.style.display === "") {
-
-    projects.style.display = "block";
-
-    projects.scrollIntoView({
-      behavior: "smooth"
-    });
-
-  } else {
-
-    projects.style.display = "none";
-
-  }
-
-}
-
-</script>
 </body>
 </html>
