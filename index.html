@@ -241,7 +241,18 @@ body {
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   height: 100%;
 }
+.service-icon{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin-bottom:20px;
+}
 
+.service-img{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+}
 .service-box:hover {
   transform: translateY(-12px);
   box-shadow: 0 20px 40px rgba(0,0,0,0.15);
@@ -603,15 +614,11 @@ body {
        onclick="toggleFEAProjects()"
        style="cursor:pointer;">
 
-  <div class="service-icon">
+<div class="service-icon">
   <img src="assets/img/fea-analysis.png"
        alt="FEA Analysis"
        class="service-img">
 </div>
-.service-img{
-  width:80px;
-  height:80px;
-  object-fit:contain;
 }
     <h5 class="fw-bold">FEA Analysis</h5>
 
