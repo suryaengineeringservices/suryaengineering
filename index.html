@@ -17,17 +17,48 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
+/* COMPANY BRANDING */
+.company-text{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
 
+.company-name{
+  color:#ffffff;
+  font-size:30px;
+  font-weight:700;
+  margin:0;
+  line-height:1;
+  letter-spacing:2px;
+}
+
+.company-subtitle{
+  color:#f59e0b;
+  font-size:12px;
+  font-weight:500;
+  letter-spacing:3px;
+  margin-top:6px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+  .company-name{
+    font-size:22px;
+  }
+
+  .company-subtitle{
+    font-size:10px;
+    letter-spacing:2px;
+  }
+
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   font-family: 'Poppins', sans-serif;
   background: #f8fafc;
@@ -38,10 +69,25 @@ body {
 .custom-navbar {
   <a class="navbar-brand d-flex align-items-center" href="index.html">
 
+  <!-- LOGO -->
   <img src="assets/img/logo.png"
        alt="SURYA Engineering Logo"
-       style="height:65px; width:auto; margin-right:12px;">
+       style="height:75px; width:auto; margin-right:15px;">
 
+  <!-- COMPANY NAME -->
+  <div class="company-text">
+
+    <h2 class="company-name">
+      SURYA
+    </h2>
+
+    <span class="company-subtitle">
+      ENGINEERING SERVICES
+    </span>
+
+  </div>
+
+</a>
   <div class="d-flex flex-column">
 
     <span style="
@@ -550,68 +596,117 @@ body {
 
     <div class="row g-4">
 
-      <div class="col-lg-3 col-md-6" data-aos="zoom-in">
-        <div class="service-box text-center">
-          <div class="service-icon">
-            <i class="fa-solid fa-cubes"></i>
-          </div>
-          <h5 class="fw-bold">FEA Analysis</h5>
-          <p class="mt-3">
-            Structural, fatigue, vibration and nonlinear stress analysis.
+      <!-- FEA SERVICE -->
+<div class="col-lg-3 col-md-6" data-aos="zoom-in">
+
+  <div class="service-box text-center"
+       onclick="toggleFEAProjects()"
+       style="cursor:pointer;">
+
+    <div class="service-icon">
+      <i class="fa-solid fa-cubes"></i>
+    </div>
+
+    <h5 class="fw-bold">FEA Analysis</h5>
+
+    <p class="mt-3">
+      Structural, fatigue, vibration and nonlinear stress analysis.
+    </p>
+
+  </div>
+
+</div>
+
+<!-- FEA PROJECTS -->
+<div id="fea-projects" style="display:none;" class="mt-5">
+
+  <div class="row g-4">
+
+    <!-- Project 1 -->
+    <div class="col-lg-4">
+
+      <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+
+        <img src="images/pressure-vessel.jpg"
+             class="card-img-top"
+             alt="Pressure Vessel Analysis"
+             style="height:250px; object-fit:cover;">
+
+        <div class="card-body">
+
+          <h5 class="fw-bold">
+            Pressure Vessel Integrity
+          </h5>
+
+          <p class="text-muted">
+            Structural FEA to validate stress distribution
+            and fatigue life of high-pressure vessels
+            under ASME standards.
           </p>
-        </div>
-      </div>
-<div class="row">
-<section id="fea-projects" class="py-5 bg-light">
-  <!-- FEA projects content -->
-</section>
-<a href="#fea-projects" class="btn btn-outline-primary">
-  FEA Analysis
-</a>
-html {
-  scroll-behavior: smooth;
-}
-      <!-- Project 1 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/pressure-vessel.jpg" class="card-img-top" alt="Pressure Vessel Analysis">
-          <div class="card-body">
-            <h5 class="card-title">Pressure Vessel Integrity</h5>
-            <p class="card-text">
-              Structural FEA to validate stress distribution and fatigue life of high-pressure vessels under ASME standards.
-            </p>
-          </div>
-        </div>
-      </div>
 
-      <!-- Project 2 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/automotive-chassis.jpg" class="card-img-top" alt="Automotive Chassis Analysis">
-          <div class="card-body">
-            <h5 class="card-title">Automotive Chassis Static FE</h5>
-            <p class="card-text">
-              Finite element analysis of chassis components to ensure durability, stiffness, and crashworthiness.
-            </p>
-          </div>
         </div>
-      </div>
 
-      <!-- Project 3 -->
-      <div class="col-md-4 mb-4">
-        <div class="card h-100 shadow-sm">
-          <img src="images/heat-exchanger.jpg" class="card-img-top" alt="Heat Exchanger Thermal Analysis">
-          <div class="card-body">
-            <h5 class="card-title">Heat Exchanger Thermal FEA</h5>
-            <p class="card-text">
-              Thermal stress and fatigue analysis of heat exchangers to optimize performance and extend service life.
-            </p>
-          </div>
-        </div>
       </div>
 
     </div>
+
+    <!-- Project 2 -->
+    <div class="col-lg-4">
+
+      <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+
+        <img src="images/automotive-chassis.jpg"
+             class="card-img-top"
+             alt="Automotive Chassis Analysis"
+             style="height:250px; object-fit:cover;">
+
+        <div class="card-body">
+
+          <h5 class="fw-bold">
+            Automotive Chassis Static FE
+          </h5>
+
+          <p class="text-muted">
+            Finite element analysis of chassis components
+            to ensure durability, stiffness and crashworthiness.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Project 3 -->
+    <div class="col-lg-4">
+
+      <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+
+        <img src="images/heat-exchanger.jpg"
+             class="card-img-top"
+             alt="Heat Exchanger Thermal Analysis"
+             style="height:250px; object-fit:cover;">
+
+        <div class="card-body">
+
+          <h5 class="fw-bold">
+            Heat Exchanger Thermal FEA
+          </h5>
+
+          <p class="text-muted">
+            Thermal stress and fatigue analysis of heat exchangers
+            to optimize performance and extend service life.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
+
+</div>
       <div class="col-lg-3 col-md-6" data-aos="zoom-in">
         <div class="service-box text-center">
           <div class="service-icon">
@@ -934,6 +1029,28 @@ AOS.init({
   once: true
 });
 </script>
+<script>
 
+function toggleFEAProjects() {
+
+  const projects = document.getElementById("fea-projects");
+
+  if(projects.style.display === "none" || projects.style.display === "") {
+
+    projects.style.display = "block";
+
+    projects.scrollIntoView({
+      behavior: "smooth"
+    });
+
+  } else {
+
+    projects.style.display = "none";
+
+  }
+
+}
+
+</script>
 </body>
 </html>
