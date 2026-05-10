@@ -11,7 +11,80 @@
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 <style>
+.fea-sidebar{
+  background:#dcdcdc;
+}
 
+.fea-menu-item{
+  padding:28px 28px;
+  border-bottom:1px solid #f5f5f5;
+  font-size:18px;
+  color:#4b5563;
+  cursor:pointer;
+  transition:0.3s;
+  background:#dcdcdc;
+}
+
+.fea-menu-item:hover{
+  background:#cfcfcf;
+}
+
+.fea-menu-item.active{
+  background:#fff;
+  border-left:5px solid #ef4444;
+  font-weight:600;
+}
+
+.fea-main-box{
+  background:#e7e7e7;
+  padding:40px;
+  min-height:650px;
+}
+
+.fea-heading{
+  font-size:26px;
+  font-weight:700;
+  color:#000;
+  margin-bottom:25px;
+  line-height:1.5;
+}
+
+.fea-points{
+  padding-left:25px;
+}
+
+.fea-points li{
+  font-size:20px;
+  color:#666;
+  margin-bottom:22px;
+  line-height:1.9;
+}
+
+.fea-tab-content{
+  display:none;
+}
+
+.active-content{
+  display:block;
+}
+
+@media(max-width:991px){
+
+  .fea-main-box{
+    padding:25px;
+  }
+
+  .fea-heading{
+    font-size:22px;
+  }
+
+  .fea-points li{
+    font-size:17px;
+  }
+
+}
+
+</style>
 *{
   margin:0;
   padding:0;
@@ -338,7 +411,41 @@ body{
 
 </style>
 </head>
+<script>
 
+function scrollToFEA(){
+
+  document.getElementById('fea-details-section')
+  .scrollIntoView({
+    behavior:'smooth'
+  });
+
+}
+
+function showFEATab(event,id){
+
+  let tabs =
+  document.querySelectorAll('.fea-menu-item');
+
+  let contents =
+  document.querySelectorAll('.fea-tab-content');
+
+  tabs.forEach(tab=>{
+    tab.classList.remove('active');
+  });
+
+  contents.forEach(content=>{
+    content.classList.remove('active-content');
+  });
+
+  event.currentTarget.classList.add('active');
+
+  document.getElementById(id)
+  .classList.add('active-content');
+
+}
+
+</script>
 <body>
 
 <!-- NAVBAR -->
@@ -538,23 +645,278 @@ Advanced engineering simulation and CAE consulting services.
 
 <div class="row g-4">
 
-<div class="col-lg-3 col-md-6">
+<section class="section-padding pt-0" id="fea-details-section">
 
-<div class="service-box">
+<div class="container-fluid px-lg-5">
 
-<img src="assets/img/fea-analysis.png"
-class="service-img">
+<div class="row">
 
-<h4>FEA Analysis</h4>
+<!-- LEFT SIDEBAR -->
 
-<p>
-Structural, fatigue, vibration and nonlinear stress analysis.
-</p>
+<div class="col-lg-2 mb-4 mb-lg-0">
+
+<div class="fea-sidebar">
+
+<div class="fea-menu-item active"
+onclick="showFEATab(event,'fea-content')">
+FEA
+</div>
+
+<div class="fea-menu-item"
+onclick="showFEATab(event,'automotive-content')">
+Automotive
+</div>
+
+<div class="fea-menu-item"
+onclick="showFEATab(event,'construction-content')">
+Construction
+</div>
+
+<div class="fea-menu-item"
+onclick="showFEATab(event,'heavy-content')">
+Heavy Engineering
+</div>
+
+<div class="fea-menu-item"
+onclick="showFEATab(event,'process-content')">
+Process Industry
+</div>
+
+<div class="fea-menu-item"
+onclick="showFEATab(event,'turbo-content')">
+Turbo Machinery
+</div>
+
+</div>
+
+</div>
+
+<!-- RIGHT CONTENT -->
+
+<div class="col-lg-10">
+
+<div class="fea-main-box">
+
+<!-- FEA CONTENT -->
+
+<div class="fea-tab-content active-content"
+id="fea-content">
+
+<div class="row g-5">
+
+<div class="col-lg-4">
+
+<h3 class="fea-heading">
+Meshing for FEA Application
+</h3>
+
+<ul class="fea-points">
+
+<li>Geometry simplification and cleanup</li>
+
+<li>Extraction of mid-surface/mid-plane</li>
+
+<li>Shell, Tetrahedral and Hexahedral Mesh.</li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-4">
+
+<h3 class="fea-heading">
+Finite Element Analysis (FEA)
+</h3>
+
+<ul class="fea-points">
+
+<li>Linear and Non-Linear Structural Analysis</li>
+
+<li>Dynamic response problems</li>
+
+<li>Linear and Non-Linear Thermal Analysis</li>
+
+<li>Fatigue and Durability Analysis</li>
+
+<li>Optimization of design with weight/cost reduction</li>
+
+<li>Removal of redundant components from design</li>
+
+<li>FEA of Pressure Vessels and Heat Exchangers as per ASME Sec. VIII, Div. 2, Part 5.</li>
+
+</ul>
+
+</div>
+
+<div class="col-lg-4">
+
+<h3 class="fea-heading">
+FEA Service for Following Industries
+</h3>
+
+<ul class="fea-points">
+
+<li>Automotive</li>
+
+<li>Aerospace</li>
+
+<li>Construction / Infrastructure</li>
+
+<li>HVAC</li>
+
+<li>Biomedical</li>
+
+<li>Chemical</li>
+
+<li>Process Industry</li>
+
+<li>Heavy Engineering</li>
+
+<li>Oil & Gas</li>
+
+<li>General Engineering</li>
+
+</ul>
 
 </div>
 
 </div>
 
+</div>
+
+<!-- AUTOMOTIVE -->
+
+<div class="fea-tab-content"
+id="automotive-content">
+
+<h3 class="fea-heading mb-4">
+Automotive Engineering Analysis
+</h3>
+
+<ul class="fea-points">
+
+<li>Crash Simulation</li>
+
+<li>Chassis Structural Analysis</li>
+
+<li>Vehicle Fatigue Analysis</li>
+
+<li>Suspension System Validation</li>
+
+<li>Thermal Management Simulation</li>
+
+</ul>
+
+</div>
+
+<!-- CONSTRUCTION -->
+
+<div class="fea-tab-content"
+id="construction-content">
+
+<h3 class="fea-heading mb-4">
+Construction Engineering Analysis
+</h3>
+
+<ul class="fea-points">
+
+<li>Steel Structure Validation</li>
+
+<li>Bridge Structural Analysis</li>
+
+<li>Wind Load Analysis</li>
+
+<li>Earthquake Simulation</li>
+
+<li>Concrete Stress Evaluation</li>
+
+</ul>
+
+</div>
+
+<!-- HEAVY -->
+
+<div class="fea-tab-content"
+id="heavy-content">
+
+<h3 class="fea-heading mb-4">
+Heavy Engineering Analysis
+</h3>
+
+<ul class="fea-points">
+
+<li>Heavy Equipment Structural Analysis</li>
+
+<li>Weld Strength Validation</li>
+
+<li>Industrial Machinery Simulation</li>
+
+<li>Stress & Fatigue Evaluation</li>
+
+<li>Load Carrying Analysis</li>
+
+</ul>
+
+</div>
+
+<!-- PROCESS -->
+
+<div class="fea-tab-content"
+id="process-content">
+
+<h3 class="fea-heading mb-4">
+Process Industry Simulation
+</h3>
+
+<ul class="fea-points">
+
+<li>Pressure Vessel Analysis</li>
+
+<li>Heat Exchanger Thermal Simulation</li>
+
+<li>Piping Stress Analysis</li>
+
+<li>Flow Optimization</li>
+
+<li>CFD Validation</li>
+
+</ul>
+
+</div>
+
+<!-- TURBO -->
+
+<div class="fea-tab-content"
+id="turbo-content">
+
+<h3 class="fea-heading mb-4">
+Turbo Machinery Analysis
+</h3>
+
+<ul class="fea-points">
+
+<li>Turbine Blade Analysis</li>
+
+<li>Rotor Dynamic Simulation</li>
+
+<li>Thermal Stress Validation</li>
+
+<li>Vibration Analysis</li>
+
+<li>Performance Optimization</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+</section>
 <div class="col-lg-3 col-md-6">
 
 <div class="service-box">
